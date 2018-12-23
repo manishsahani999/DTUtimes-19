@@ -47,7 +47,8 @@ Route::group(['prefix' => 'manage', 'middleware' => ['role:superuser', 'checkAct
         Route::get('/{uuid}/role', 'User\SuperuserController@editRoleUser')->name('users.role.edit');
         Route::post('/{uuid}/role', 'User\SuperuserController@updateRoleUser')->name('users.role.update');
         Route::delete('/{uuid}', 'User\SuperuserController@destroyUser')->name('users.destroy');
-    });    
+    });  
+    
 });
 
 Route::group(['prefix' => 'council', 'middleware' => ['role:council|superuser|coordinator', 'checkActivatedUser']], function() {
@@ -85,6 +86,10 @@ Route::group(['prefix' => 'council', 'middleware' => ['role:council|superuser|co
             Route::get('/{uuid}/publish', 'User\CouncilController@publish')->name('council.stories.publish');
         });
         
+    });
+
+    Route::group(['prefix' => 'notifications'], function () {
+        Route::get('/', 'NotificationController@index')->name('notifications.index');
     });
 });
 

@@ -182,6 +182,9 @@
                 <li>
                     <a href="{{ route('subscribers.index')}}">Subscribers</a>
                 </li>
+                <li>
+                    <a href="{{ route('notifications.index')}}">Notifications</a>
+                </li>
                 @endif
 
             </ul>
