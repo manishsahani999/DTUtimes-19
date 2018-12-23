@@ -179,11 +179,27 @@
                         </div>
                     </div>
                 </li>
-                <li>
-                    <a href="{{ route('subscribers.index')}}">Subscribers</a>
+                <li class="dropdown">
+                    <span>
+                        Notifications
+                    </span>
+                    <div class="dropdown__container">
+                        <div class="dropdown__content">
+                            <ul class="menu-vertical">
+                                <li>
+                                    <a href="{{ route('notifications.index')}}">All Notifications</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('notifications.create') }}">
+                                        New Notification
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <a href="{{ route('notifications.index')}}">Notifications</a>
+                    <a href="{{ route('subscribers.index')}}">Subscribers</a>
                 </li>
                 @endif
 
