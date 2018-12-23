@@ -13,29 +13,75 @@
         <!--end of container-->
     </section>
 
-    <section>
+    
+        
+    
+
+    @if ($notifications->count())
+    <section class=" ">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div class="process-1">
-                        {{-- @foreach ($stories as $item) --}}
-                        <div class="process__item">
-                            <h4>Title here
-                                <br> <span><small>time here</small></span>
-                                {{-- <br> <span><small>{{ $item->created_at->diffForHumans() }}</small></span> --}}
-                            </h4>
-                            <p>
-                                {{-- {{ $item->biliner }} --}}
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid facere adipisci odio aut eos, autem, beatae, dolor fugit harum officia omnis amet placeat aliquam impedit sit magnam alias. Repellendus, hic.
-                            </p>
+                @foreach ($notifications as $item)
+                <div class="col-md-12 col-lg-10">
+                    <div class="masonry">
+                        <div class="masonry__container row">
+                            <div class="col-md-6 masonry__item">
+                                <div class="card card-1 boxed boxed--sm boxed--border">
+                                    <div class="card__top">
+                                        <div class="card__avatar">
+                                            {{-- <a href="#">
+                                                <img alt="Image" src="{{ auth()->user()->getFirstMediaUrl('avatars', 'thumb') }}">
+                                            </a> --}}
+                                            <span>
+                                                <strong>{{ $item->name }}</strong>
+                                            </span>
+                                        </div>
+                                        <div class="card__meta">
+                                            <span>{{ $item->created_at->diffForHumans() }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="card__body">
+                                        <a href="#">
+                                            <h4>
+                                                {{ $item->description }}
+                                            </h4>
+                                        </a>
+                                        <p>
+                                            <a href="#">View</a>
+                                        </p>
+                                    </div>
+                                    <div class="card__bottom">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <div class="card__action">
+                                                    <a href="#">
+                                                        <i class="material-icons">remove_red_eye</i>
+                                                        <span>{{ $item->view_count }}</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 offset-md-1 masonry__item">
+                                <div class="boxed boxed--sm">
+                                    <div>
+                                        <small>created by,</small>
+                                        <h3 class="d-inline">Manish</h3>
+                                    </div>
+                                    <small>created {{ $item->created_at->diffForHumans() }}</small> 
+                                    <p>
+                                        <small>views: {{ $item->view_count}} </small>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        {{-- @endforeach --}}
                     </div>
-                    <!--end process-->
                 </div>
+                @endforeach
             </div>
-            <!--end of row-->
         </div>
-        <!--end of container-->
     </section>
+    @endif
 @endsection

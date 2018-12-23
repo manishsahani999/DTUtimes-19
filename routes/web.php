@@ -90,6 +90,8 @@ Route::group(['prefix' => 'council', 'middleware' => ['role:council|superuser|co
 
     Route::group(['prefix' => 'notifications'], function () {
         Route::get('/', 'NotificationController@index')->name('notifications.index');
+        Route::get('/create', 'NotificationController@create')->name('notifications.create');
+        Route::post('/', 'NotificationController@store')->name('notifications.store');
     });
 });
 

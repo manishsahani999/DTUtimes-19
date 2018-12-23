@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Notification;
 
 class NotificationController extends Controller
 {
@@ -13,7 +14,10 @@ class NotificationController extends Controller
      */
     public function index()
     {
-        return view('notifications.index');
+        $notifications =Notification::latest()->get();
+        return view('notifications.index', [
+            'notifications' => $notifications
+        ]);
     }
 
     /**
@@ -23,7 +27,7 @@ class NotificationController extends Controller
      */
     public function create()
     {
-        //
+        return view('notifications.create');
     }
 
     /**
@@ -34,7 +38,9 @@ class NotificationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        auth()->user()->notification()->create($request->all());
+
+        return redirect()->route('notifications.index');
     }
 
     /**
