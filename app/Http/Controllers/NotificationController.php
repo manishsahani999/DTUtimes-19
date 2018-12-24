@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Notification;
+use App\Events\NotificationEvent;
 
 class NotificationController extends Controller
 {
@@ -86,5 +87,12 @@ class NotificationController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function send($id)
+    {
+        $notification = auth()->user()->notification()->whereId($id)->first();
+
+        broadcast(new NotificationEvent($notification))->toOthers();
     }
 }

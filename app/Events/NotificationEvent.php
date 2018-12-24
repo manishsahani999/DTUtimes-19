@@ -9,6 +9,7 @@ use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use App\Models\Notification;
 
 class NotificationEvent
 {
@@ -21,9 +22,9 @@ class NotificationEvent
      *
      * @return void
      */
-    public function __construct($notification)
+    public function __construct(Notification $notification)
     {
-        //
+        $this->notification = $notification;
     }
 
     /**
