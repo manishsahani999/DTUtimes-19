@@ -5,7 +5,11 @@
 
 <head>
 	<meta charset="utf-8">
+<<<<<<< HEAD
 	<title>DTU Times | Not Found </title>
+=======
+	<title>DTU Times | Not Found</title>
+>>>>>>> b6d90b4373c82f6b14246c3ab7e863009f7c415c
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Site Description Here">
 	
@@ -21,7 +25,7 @@
 			<div class="container pos-vertical-center">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 class="h1--large">404</h1>
+						<img class="image--md" src="{{ asset('svg/error-404.svg')}}" alt="">
 						<p class="lead">
 							Not Found
 						</p>
