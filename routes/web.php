@@ -34,9 +34,21 @@ Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetFor
 
 // Superuser Routes
 Route::group(['prefix' => 'manage', 'middleware' => ['role:superuser', 'checkActivatedUser']], function() {
+    
+    // Dashboard 
     Route::get('/', 'User\SuperuserController@index')->name('superuser.dashboard');
-    Route::get('/roles', 'RoleController@index')->name('roles.index');
+    
+    // Roles
+    Route::group(['prefix' => 'roles'], function () {
+        Route::get('/', 'RoleController@index')->name('roles.index');
+        Route::get('/create', 'RoleController@create')->name('roles.create');
+        Route::post('/', 'RoleController@store')->name('roles.store');
+    });
+
+    // Permissions
     Route::get('/permissions', 'PermissionController@index')->name('permissions.index');
+
+    // Members
     Route::group(['prefix' => 'members'], function () {
         Route::get('/', 'User\SuperuserController@indexUser')->name('users.index');
         Route::get('/create', 'User\SuperuserController@createUser')->name('users.create');
@@ -51,8 +63,13 @@ Route::group(['prefix' => 'manage', 'middleware' => ['role:superuser', 'checkAct
     
 });
 
+// Council Routes
 Route::group(['prefix' => 'council', 'middleware' => ['role:council|superuser|coordinator', 'checkActivatedUser']], function() {
+    
+    // Dashboard currently using superusers
     Route::get('/', 'User\SuperuserController@index')->name('council.dashboard');
+
+    // Campaign
     Route::group(['prefix' => 'campaign', 'middleware' => 'role:council|superuser'], function () {
         Route::get('/', 'Email\CampaignController@index')->name('campaigns.index');
         Route::get('/create', 'Email\CampaignController@create')->name('campaigns.create');
@@ -64,6 +81,7 @@ Route::group(['prefix' => 'council', 'middleware' => ['role:council|superuser|co
         Route::delete('/{uuid}', 'Email\CampaignController@destroy')->name('campaigns.destroy');
     });
 
+    // Subscriber
     Route::group(['prefix' => 'subscriber', 'middleware' => 'role:council|superuser'], function () {
         Route::get('/', 'Email\SubscriberController@index')->name('subscribers.index');
         Route::get('/create', 'Email\SubscriberController@create')->name('subscribers.create');
@@ -74,7 +92,8 @@ Route::group(['prefix' => 'council', 'middleware' => ['role:council|superuser|co
         Route::get('/{uuid}/delete', 'Email\SubscriberController@destroy')->name('subscribers.destroy');
     });
 
-    Route::group(['prefix' => 'stories', 'middleware' => 'role:council|superuser|coordinator'], function () {
+    // Stories routes beyond crud
+    Route::group(['prefix' => 'stories'], function () {
         Route::get('/pending', 'User\CouncilController@index')->name('council.stories.index');
         Route::get('/published', 'User\CouncilController@publishedIndex')->name('council.stories.published');
         Route::delete('/published/{uuid}', 'User\CouncilController@publishedDestroy')->name('council.stories.destory');
@@ -92,6 +111,12 @@ Route::group(['prefix' => 'council', 'middleware' => ['role:council|superuser|co
         Route::get('/', 'NotificationController@index')->name('notifications.index');
         Route::get('/create', 'NotificationController@create')->name('notifications.create');
         Route::post('/', 'NotificationController@store')->name('notifications.store');
+
+    });
+    // Stats
+    Route::group(['prefix' => 'stats'], function () {
+        Route::get('/stories', 'StatsController@indexStories')->name('stats.stories');
+        Route::get('/albums', 'StatsController@indexAlbums')->name('stats.albums');
     });
 });
 
@@ -132,7 +157,7 @@ Route::middleware(['auth', 'checkActivatedUser'])->group(function () {
 
     Route::get('/developers', 'HomeController@devIndex')->name('dev.index');
 
-    Route::group(['prefix' =>'todos'], function () {
+    Route::group(['prefix' =>'todos', 'middleware' => ['role:superuser|council|columnist|photographer|coordinator']], function () {
         Route::post('/', 'HomeController@storeTodo')->name('todos.store');
         Route::get('/{id}/done', 'HomeController@doneTodo')->name('todos.done');
         Route::delete('/{id}', 'HomeController@destroyTodo')->name('todos.destroy');
@@ -196,8 +221,13 @@ Route::middleware(['auth', 'checkActivatedUser'])->group(function () {
         });
     });
 
-    Route::get('/uploads', 'ImageController@me')->name('images.me');// User images
-
+    Route::get('/uploads', 'ImageController@me')->name('images.me')->middleware('role:superuser|council|columnist|photographer|coordinator');// User images
+    
+    Route::group(['prefix' => 'society-info', 'middleware' => ['role:superuser|council|society_head']], function() {
+        Route::get('/', 'User\SocietyHeadController@index')->name('society.head.index');
+        Route::get('/create', 'User\SocietyHeadController@create')->name('society.head.create');
+        Route::post('/', 'User\SocietyHeadController@store')->name('society.head.store');
+    });
 
     
 });

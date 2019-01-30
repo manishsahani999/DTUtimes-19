@@ -67,7 +67,7 @@
 				<li><a href="#designers" data-toggle="tab">Designers</a></li>
 				<li><a href="#illustrators" data-toggle="tab">Illustrators</a></li>
 				<li><a href="#photographers" data-toggle="tab">Photographers</a></li>
-				<li><a href="#webdevelopers" data-toggle="tab">Web-Developers</a></li>
+				<li><a href="#webdevelopers" data-toggle="tab">Developers</a></li>
 
 			</ul>
 
@@ -1098,6 +1098,30 @@
 						<div class="col-md-2 col-xs-6 bottommargin">
 							<div class="team">
 								<div class="team-image">
+									<img src="img/team/Columnists/Saurabh%20Tiwari.jpg" alt="Saurabh">
+								</div>
+								<div class="team-desc">
+									<div class="team-title">
+										<h5>Saurabh<br>Tiwari</h5>
+									</div>
+									<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/stthegreat
+" class="social-icon inline-block si-small si-light si-rounded si-facebook">
+										<i class="icon-facebook"></i>
+										<i class="icon-facebook"></i>
+									</a>
+									<a target="_blank" rel="noopener noreferrer" href="#" class="social-icon inline-block si-small si-light si-rounded si-linkedin">
+										<i class="icon-linkedin"></i>
+										<i class="icon-linkedin"></i>
+									</a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2 col-xs-6 bottommargin">
+							<div class="team">
+								<div class="team-image">
 									<img src="img/team/Columnists/Shruti%20Kumar.jpg" alt="Shruti">
 								</div>
 								<div class="team-desc">
@@ -1236,7 +1260,31 @@
 								</div>
 							</div>
 						</div>
+						<div class="col-md-2 col-xs-6 bottommargin">
+							<div class="team">
+								<div class="team-image">
+									<img src="/img/team/Designers/Aavriti%20Arora.jpg" alt="Aavriti">
+								</div>
+								<div class="team-desc">
+									<div class="team-title">
+										<h5>Aavriti<br> Arora</h5>
+										<h6 style="opacity:0"></h6>
+									</div>
+									<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/aavriti.arora
+" class="social-icon inline-block si-small si-light si-rounded si-facebook">
+										<i class="icon-facebook"></i>
+										<i class="icon-facebook"></i>
+									</a>
+									<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/aavriti-arora-b42671152/
+" class="social-icon inline-block si-small si-light si-rounded si-linkedin">
+										<i class="icon-linkedin"></i>
+										<i class="icon-linkedin"></i>
+									</a>
 
+								</div>
+							</div>
+							<br><br>
+						</div>
 						<div class="col-md-2 col-xs-6 bottommargin">
 							<div class="team">
 								<div class="team-image">
@@ -1261,8 +1309,8 @@
 							</div>
 							<br><br>
 						</div>
-
-
+					</div>
+					<div class="row">
 						<div class="col-md-2 col-xs-6 bottommargin">
 							<div class="team">
 								<div class="team-image">
@@ -1286,10 +1334,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-
-
-					<div class="row">
 
 
 						<div class="col-md-2 col-xs-6 bottommargin">
@@ -1421,8 +1465,8 @@
 								</div>
 							</div>
 						</div>
-
-
+					</div>
+					<div class="row">
 						<div class="col-md-2 col-xs-6 bottommargin">
 							<div class="team">
 								<div class="team-image">
@@ -1448,8 +1492,6 @@
 							</div>
 						</div>
 
-					</div>
-					<div class="row">
 
 						<div class="col-md-2 col-xs-6 bottommargin">
 							<div class="team">
@@ -1566,31 +1608,6 @@
 						</div>
 
 						
-
-						<div class="col-md-2 col-xs-6 bottommargin">
-							<div class="team">
-								<div class="team-image">
-									<img src="/img/team/Illustrators/Aavriti%20Arora.jpg" alt="Aavriti">
-								</div>
-								<div class="team-desc">
-									<div class="team-title">
-										<h5>Aavriti<br> Arora</h5>
-										<h6 style="opacity:0"></h6>
-									</div>
-									<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/aavriti.arora
-" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-										<i class="icon-facebook"></i>
-										<i class="icon-facebook"></i>
-									</a>
-									<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/aavriti-arora-b42671152/
-" class="social-icon inline-block si-small si-light si-rounded si-linkedin">
-										<i class="icon-linkedin"></i>
-										<i class="icon-linkedin"></i>
-									</a>
-
-								</div>
-							</div>
-						</div>
 						<div class="col-md-2 col-xs-6 bottommargin">
 							<div class="team">
 								<div class="team-image">
@@ -1638,60 +1655,6 @@
 								</div>
 							</div>
 						</div>
-
-						<div class="col-md-2 col-xs-6 bottommargin">
-							<div class="team">
-								<div class="team-image">
-									<img src="/img/team/Illustrators/Amit%20Kumar.jpg" alt="Amit Dogra">
-								</div>
-								<div class="team-desc">
-									<div class="team-title">
-										<h5>Amit<br> Dogra </h5>
-										<h6 style="opacity:0"></h6>
-									</div>
-									<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=100001482658406
-" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-										<i class="icon-facebook"></i>
-										<i class="icon-facebook"></i>
-									</a>
-									<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/amit-kd-73465a108/
-" class="social-icon inline-block si-small si-light si-rounded si-linkedin">
-										<i class="icon-linkedin"></i>
-										<i class="icon-linkedin"></i>
-									</a>
-
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-
-						<div class="col-md-2 col-xs-6 bottommargin">
-							<div class="team">
-								<div class="team-image">
-									<img src="/img/team/Illustrators/Ananya%20Aggarwal.jpg" alt="Ananya Aggarwal">
-								</div>
-								<div class="team-desc">
-									<div class="team-title">
-										<h5>Ananya<br> Aggarwal</h5>
-									</div>
-									<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/ananya.aggarwal.3344
-" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-										<i class="icon-facebook"></i>
-										<i class="icon-facebook"></i>
-									</a>
-									<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ananya-aggarwal-90a90613b/
-" class="social-icon inline-block si-small si-light si-rounded si-linkedin">
-										<i class="icon-linkedin"></i>
-										<i class="icon-linkedin"></i>
-									</a>
-
-
-								</div>
-							</div>
-						</div>
-					
 						<div class="col-md-2 col-xs-6 bottommargin">
 							<div class="team">
 								<div class="team-image">
@@ -1740,6 +1703,8 @@
 								</div>
 							</div>
 						</div>
+					</div>
+					<div class="row">
 						<div class="col-md-2 col-xs-6 bottommargin">
 							<div class="team">
 								<div class="team-image">
@@ -1806,9 +1771,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
-
-					<div class="row">	
+						
 						<div class="col-md-2 col-xs-6 bottommargin">
 							<div class="team">
 								<div class="team-image">
@@ -2140,7 +2103,7 @@
 				</div>
 				<div class="tab-pane fade" id="webdevelopers" style="margin-left:10%; margin-right:10%">
 					<div class="fancy-title title-border">
-						<h3>Web-Developers</h3><br>
+						<h3>Developers</h3><br>
 
 					</div>
 
@@ -2169,32 +2132,6 @@
 							</div>
 						</div>
 
-
-						<div class="col-md-2 col-xs-6 bottommargin">
-							<div class="team">
-								<div class="team-image">
-									<img src="/img/team/WebDevelopers/Abhishek.jpeg" alt="Abhishek">
-								</div>
-								<div class="team-desc">
-									<div class="team-title">
-										<h5>Abhishek <br> Sharma</h5>
-									</div>
-									<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/absharma1099" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-										<i class="icon-facebook"></i>
-										<i class="icon-facebook"></i>
-									</a>
-									<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/absharma1099/" class="social-icon inline-block si-small si-light si-rounded si-linkedin">
-										<i class="icon-linkedin"></i>
-										<i class="icon-linkedin"></i>
-									</a>
-
-
-								</div>
-							</div>
-							<br><br>
-						</div>
-
-
 						<div class="col-md-2 col-xs-6 bottommargin">
 							<div class="team">
 								<div class="team-image">
@@ -2216,6 +2153,7 @@
 
 								</div>
 							</div>
+							<br><br>
 						</div>
 
 						<div class="col-md-2 col-xs-6 bottommargin">

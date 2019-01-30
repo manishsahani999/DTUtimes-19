@@ -77,6 +77,11 @@ class User extends Authenticatable implements HasMedia
     {
         return $this->hasMany('App\Models\Notification');
     }
+    
+    public function society()
+    {
+        return $this->hasOne('App\Models\Society');
+    }
 
 }
 

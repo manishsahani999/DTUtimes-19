@@ -30,7 +30,7 @@
                     </a>
                 </li>
 
-                {{-- Stories option --}} @if (!auth()->user()->hasRole('photographer'))
+                {{-- Stories option --}} @if (!auth()->user()->hasRole('photographer') && !auth()->user()->hasRole('society_head'))
                 <li class="dropdown">
                     <span class="dropdown__trigger">
                             Story
@@ -89,7 +89,7 @@
                         </div>
                     </div>
                 </li>
-                @endif @if (!auth()->user()->hasRole('columnist'))
+                @endif @if (!auth()->user()->hasRole('columnist') && !auth()->user()->hasRole('society_head'))
                 <li class="dropdown">
                     <span class="dropdown__trigger">
                             Album
@@ -110,16 +110,17 @@
                                         </a>
                                 </li>
                                 @endif
+
+                                <li>
+                                    <a href="{{ route('images.me')}}">
+                                        All Images
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </li>
 
-                <li>
-                    <a href="{{ route('images.me')}}">
-                            All Images
-                        </a>
-                </li>
                 @endif @if (auth()->user()->hasRole('superuser'))
                 <li class="dropdown">
                     <span class="dropdown__trigger">
@@ -148,9 +149,25 @@
                                         Permissions
                                     </a>
                                 </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <span class="dropdown__trigger">
+                        Role
+                    </span>
+                    <div class="dropdown__container">
+                        <div class="dropdown__content">
+                            <ul class="menu-vertical">
                                 <li>
                                     <a href="{{ route('roles.index') }}">
-                                        Roles
+                                        All Roles
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('roles.create') }}">
+                                        New Role
                                     </a>
                                 </li>
                             </ul>
@@ -158,6 +175,27 @@
                     </div>
                 </li>
                 @endif @if (auth()->user()->hasRole(['council', 'superuser']))
+                <li class="dropdown">
+                    <span>
+                        Insights    
+                    </span>
+                    <div class="dropdown__container">
+                        <div class="dropdown__content">
+                            <ul class="menu-vertical">
+                                <li>
+                                    <a href="{{ route('stats.stories')}}">
+                                        Story
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('stats.albums') }}">
+                                        Album
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
                 <li class="dropdown">
                     <span>
                             Campaigns
