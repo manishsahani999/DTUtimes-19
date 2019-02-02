@@ -131,26 +131,7 @@
 @endif
 
 @if (auth()->user()->hasRole('society_head'))
-    <section>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    @if (auth()->user()->society()->get()->count() == 0)
-                        <h3>Hi, You haven't created your society page.</h3>
-                        <p>
-                            <a class="btn btn--sm type--uppercase" href="{{ route('society.head.create')}}" data-scroll>
-                                <span class="btn__text">
-                                    Create Your Society Page
-                                </span>
-                            </a>
-                        </p>
-                    @else
-                        <h2>{{auth()->user()->society()->first()->name}}'s Page</h2>
-                    @endif
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('users.society_head.dashboard')
 @endif
 
 @endsection
@@ -166,6 +147,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
     <script>
         var ctx = document.getElementById("myChart");
+<<<<<<< HEAD
         var myChart = new Chart(ctx, {
             type: 'doughnut',
             data: {
@@ -186,8 +168,31 @@
                 legend: {
                     display: true,
                     position: 'left'
+=======
+        if (ctx) {
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Total", "Draft", "Pending", "Published",],
+                    datasets: [{
+                        data: [{{ $total }}, {{ $draft }}, {{ $pending }}, {{ $published }}],
+                        backgroundColor: [
+                            'rgba(255,99,132,1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(10, 199, 172, 1)',
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: true,
+                        position: 'left'
+                    }
+>>>>>>> e835c62d0c09d763ce64756be8f68584eac92cdb
                 }
-            }
-        });
+            });
+        }
     </script>
 @endsection
