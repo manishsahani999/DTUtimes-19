@@ -49,8 +49,6 @@
                 </div>
                 <div class="col-md-6 col-lg-5 text-center">
                     <img class="animated fadeIn duration-2s delay-1s" src="{{$society->getFirstMediaUrl('soc_logo')}}" alt="">
-<<<<<<< HEAD
-=======
                     <ul class="social-list list-inline list--hover">
                         <li>
                             <a target="_blank" href="{{ $society->display_mail }}">
@@ -76,7 +74,6 @@
                     <p>
                         <a href="{{$society->website}}">{{$society->website}}</a>
                     </p>
->>>>>>> 10d15a7afbec7bab0ab16e559898bd2fceda2981
                 </div>
             </div>
             <!--end of row-->
