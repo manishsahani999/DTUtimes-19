@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-5 text-center">
-                    <img class="animated fadeIn duration-2s delay-2s" src="{{$society->getFirstMediaUrl('soc_logo')}}" alt="">
+                    <img class="animated fadeIn duration-2s delay-1s" src="{{$society->getFirstMediaUrl('soc_logo')}}" alt="">
                 </div>
             </div>
             <!--end of row-->
