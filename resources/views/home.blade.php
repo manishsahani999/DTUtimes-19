@@ -147,28 +147,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
     <script>
         var ctx = document.getElementById("myChart");
-<<<<<<< HEAD
-        var myChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ["Total", "Draft", "Pending", "Published",],
-                datasets: [{
-                    data: [{{ $total }}, {{ $draft }}, {{ $pending }}, {{ $published }}],
-                    backgroundColor: [
-                        'rgba(255,99,132,1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(10, 199, 172, 1)',
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                legend: {
-                    display: true,
-                    position: 'left'
-=======
         if (ctx) {
             var myChart = new Chart(ctx, {
                 type: 'doughnut',
@@ -190,7 +168,6 @@
                         display: true,
                         position: 'left'
                     }
->>>>>>> e835c62d0c09d763ce64756be8f68584eac92cdb
                 }
             });
         }
