@@ -1018,7 +1018,7 @@
 								<div class="team-desc">
 									<div class="team-title">
 										<h5>Pratyush<br> Pranjal</h5>
-										<h6>Associate Designer</h6>
+										<h6>Assistant Designer</h6>
 									</div>
 									<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/pratyush.pranjal
 " class="social-icon inline-block si-small si-light si-rounded si-facebook">
