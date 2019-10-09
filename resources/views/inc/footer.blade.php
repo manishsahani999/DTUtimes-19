@@ -31,10 +31,12 @@
                         <!--//footer-col-inner-->
 
                         <!-- InstaWidget -->
+                        <!--
                         <div class="footer-col col-md-5 col-sm-5 col-xs-12" style="text-align:center; margin-top:0px; padding:0px; box-sizing:border-box;">
                             <a style="" href="https://instawidget.net/v/user/dtu_times" id="link-61708c0555b801885f4641cb4a7da195bb8fa5c93906abdfe397b99cf9ae6706">@dtu_times</a>
                             <script src="https://instawidget.net/js/instawidget.js?u=61708c0555b801885f4641cb4a7da195bb8fa5c93906abdfe397b99cf9ae6706&width=170px"></script>
                         </div>
+                      -->
 
                     </div>
                     <!--//foooter-col-->

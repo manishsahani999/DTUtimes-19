@@ -128,7 +128,7 @@
             <div class="col-md-6 col-lg-5">
                 <div class="switchable__text">
                     <div class="text-block">
-                        <h2>Nandana/Slow ladki</h2>
+                        <h2>Nandana</h2>
                         <span>Web Developer</span>
                     </div>
                     <p class="lead">
